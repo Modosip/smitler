@@ -1,0 +1,57 @@
+.ishome {
+  & .site-header {
+    min-height: 700px;
+    height: 100vh;
+    background-color: #151515;
+    color: #fff;
+
+    & .top-line {
+      padding-top: 40px;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+.logo {
+  & img {
+    width: 128px;
+    height: auto;
+    margin-left: 40px;
+  }
+}
+
+.phone {
+  position: absolute;
+  right: 85px;
+  top: 44px;
+  @include FiraSansRegular();
+  font-size: 20px;
+  white-space: nowrap;
+
+  & .fa {
+    color: #666;
+    font-size: 22px;
+    margin-right: 3px;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 34px;
+
+  & .hamburger-box {
+    width: 34px;
+  }
+
+  & .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before {
+    border-radius: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 34px;
+  }
+}

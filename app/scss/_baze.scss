@@ -5,6 +5,10 @@
   }
 }
 
+html, body{
+  height: 100%;
+}
+
 body{
   font-size: 16px;
   min-width: 320px;
@@ -15,8 +19,14 @@ body{
   opacity: 1;
 }
 
-html{
+section, header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
 
+section {
+  background-color: #fff;
 }
 
 h1,
