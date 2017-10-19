@@ -15,6 +15,10 @@ $ (function () {
     }).bind('closed', function () {
         $('.hamburger').removeClass('is-active');
     });
+
+    $('.carousel-services').owlCarousel({
+
+    });
 });
 
 $(window).on('load', function() {
