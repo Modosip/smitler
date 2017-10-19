@@ -1,0 +1,126 @@
+$colors: $blue, $red, $accent;
+@for $i from 1 through length($colors) {
+  .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i}),
+  .carousel-services-aside .owl-item:nth-child(#{length($colors)}n+#{$i}) {
+    background-color: nth($colors, $i);
+  }
+}
+
+.carousel-services__item {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.carousel-services {
+  background-color: #151515;
+
+  & .owl-item {
+    &:hover {
+      .carousel-services__image {
+        opacity: 1;
+      }
+    }
+    .carousel-services__image {
+      opacity: .7;
+      transition: opacity .5s ease;
+      background-size: cover;
+      background-position: center;
+    }
+    &:nth-child(2n+2) {
+      & .carousel-services__item {
+        flex-direction: column;
+      }
+    }
+    & .carousel-logo {
+      text-align: center;
+      &__img {
+        display: inline-block;
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+
+  & .owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    & > div {
+      width: 63.5px;
+      height: 63.5px;
+      background-color: #fff;
+      color: #191919;
+      position: absolute;
+      text-align: center;
+      line-height: 64px;
+      font-size: 26px;
+    }
+    & .owl-prev {
+      left: 0;
+    }
+    & .owl-next {
+      right: 0;
+    }
+  }
+  & .owl-dots {
+    display: none;
+  }
+
+  &__content {
+    position: relative;
+    padding: 60px 10% 80px;
+  }
+}
+
+.carousel-service__composition {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+
+  & h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 28px;
+    margin-top: 5px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    & span {
+      font-size: 18px;
+      display: block;
+      font-weight: 300;
+    }
+  }
+}
+
+.owl-carousel .owl-nav.disabled {
+  display: block;
+}
+
+.owl-carousel {
+  & .owl-item {
+    backface-visibility: inherit;
+  }
+}
+
+.carousel-services__list {
+  margin-bottom: 25px;
+  & li {
+    border-bottom: 1px solid rgba(#000000, .1);
+    padding: 10px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    & strong {
+      @include FiraSansRegular();
+      color: #4a4a4a;
+    }
+    & .fa {
+      font-size: 14px;
+    }
+  }
+}

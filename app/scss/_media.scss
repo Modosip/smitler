@@ -25,6 +25,9 @@
       text-align: left;
     }
   }
+  .carousel-services__item {
+    flex-direction: column;
+  }
   .welcome {
     &__title {
       font-size: 45px;

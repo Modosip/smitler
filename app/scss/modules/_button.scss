@@ -45,38 +45,43 @@
       opacity: .32;
     }
   }
-  & .button-white {
-    background-color: #fff;
+}
+
+.button-white {
+  background-color: #fff;
+  color: #444;
+  &::after {
+    background-color: rgba(#000, .6);
+  }
+  &:focus, &:hover {
+    background-color: darken(#fff, 15%);
     color: #444;
     &::after {
-      background-color: rgba(#000, .6);
-    }
-    &:hover {
-      &::after {
-        background-color: rgba(#000, .2);
-      }
-    }
-    &:active {
-      &::after {
-        background-color: rgba(#000, .4);
-      }
+      background-color: rgba(#000, .2);
     }
   }
-  & .button-dark {
-    background-color: #4d4d4d;
-    color: #fff;
+  &:active {
+    background-color: darken(#fff, 25%);
+    color: #444;
     &::after {
-      background-color: $accent;
-      opacity: 1;
+      background-color: rgba(#000, .4);
     }
-    &:hover {
-      background-color: lighten(#4d4d4d, 5);
-    }
-    &:active {
-      background-color: darken(#4d4d4d, 2);
-      &::after {
-        background-color: rgba($accent, .2);
-      }
+  }
+}
+.button-dark {
+  background-color: #4d4d4d;
+  color: #fff;
+  &::after {
+    background-color: $accent;
+    opacity: 1;
+  }
+  &:hover {
+    background-color: lighten(#4d4d4d, 5);
+  }
+  &:active {
+    background-color: darken(#4d4d4d, 2);
+    &::after {
+      background-color: rgba($accent, .2);
     }
   }
 }
