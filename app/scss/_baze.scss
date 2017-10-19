@@ -46,6 +46,11 @@ img {
   vertical-align: top;
 }
 
+strong {
+  font-weight: 700;
+  @include RalewayBold();
+}
+
 ul,
 menu,
 dir,
@@ -56,15 +61,17 @@ figure{
   list-style-type: disc;
 }
 
+li{
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  list-style: none;
+}
+
 label{
   font-weight: normal;
   display: block;
   text-align: left;
-}
-
-li{
-  list-style-position: inside;
-  list-style: none;
 }
 
 a {

@@ -1,4 +1,4 @@
-# Beauty Saloon Site
+# SMitler
 
 ## Stack:
 

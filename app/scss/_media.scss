@@ -1,0 +1,99 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .welcome {
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .welcome {
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .header-contacts {
+    &__text:nth-child(2) {
+      text-align: left;
+    }
+  }
+  .welcome {
+    &__title {
+      font-size: 45px;
+    }
+
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .welcome {
+    margin-top: 30px;
+    &__title {
+      font-size: 28px;
+      margin-top: 5px;
+    }
+    &__text {
+      & span {
+        font-size: 10.3px;
+        margin: 0 5px;
+      }
+    }
+    &__strong {
+      margin-top: 15px;
+    }
+  }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+/**/
+

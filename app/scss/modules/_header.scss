@@ -56,6 +56,7 @@
   }
 }
 
+//fix mmenu
 .mm-navbar {
   height: auto;
   position: relative;
@@ -143,16 +144,17 @@ html.mm-opened {
 .header-composition {
   text-align: center;
   position: relative;
-  & p {
+  &__text {
     margin-top: 40px;
   }
-  & .button {
+  &__button {
     margin-top: 25px;
   }
 }
 
 .welcome {
-  & p {
+  &__text {
+    @include RalewayLight();
     font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
@@ -172,7 +174,7 @@ html.mm-opened {
       display: inline-block;
     }
   }
-  & .welcome__title {
+  &__title {
     @include RalewayThin();
     font-weight: 100;
     font-size: 70px;
@@ -180,7 +182,8 @@ html.mm-opened {
     white-space: nowrap;
     border-bottom: 1px solid #fff;
   }
-  & strong {
+  &__strong {
+    @include RalewayLight();
     font-weight: 300;
     text-transform: uppercase;
     font-size: 18px;
@@ -195,5 +198,58 @@ html.mm-opened {
         margin-left: 10px;
       }
     }
+  }
+}
+
+.header-social {
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 0 12.5px;
+  height: 100%;
+  border-left: rgba(255,255,255,.06) 1px solid;
+  top: 0;
+}
+
+.social {
+  margin: auto;
+  &__link {
+    color: #353535;
+    font-size: 16px;
+    display: block;
+    background-color: rgba(255,255,255,.25);
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: background-color .25s ease;
+    margin: 18px 0;
+    &:hover {
+      background-color: rgba(255,255,255,.4);
+      color: #353535;
+    }
+  }
+}
+
+.header-contacts {
+  @include RalewayLight();
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: rgba(255,255,255,.06) 1px solid;
+  padding: 12.5px;
+  width: 100%;
+  background-color: rgba(#151515, .15);
+  font-weight: 300;
+  font-size: 14px;
+  & .fa {
+    margin-right: 5px;
+    color: #555;
+  }
+
+  &__text:nth-child(2) {
+    @include FiraSansRegular();
+    text-align: center;
   }
 }
