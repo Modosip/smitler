@@ -27,7 +27,21 @@ section, header {
 
 section {
   background-color: #fff;
+  &.inverse {
+    color: #fff;
+    background-color: $dark;
+  }
+  & h2 {
+    color: $accent;
+    & span {
+      color: #fff;
+    }
+  }
+  &.about, &review, &.partners {
+    padding: 5% 0px;
+  }
 }
+
 
 h1,
 h2,
@@ -38,6 +52,15 @@ h6{
   margin: 0;
   text-transform: uppercase;
   line-height: 1.4;
+}
+
+h2 {
+  @include RalewayExtraBold();
+  font-size: 30px;
+}
+
+h3 {
+  @include RalewayExtraBold();
 }
 
 img {

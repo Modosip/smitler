@@ -53,6 +53,11 @@ $ (function () {
         ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
     });
 
+    $('section h2').each(function() {
+        var ths = $(this);
+        ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+    });
+
     //Resize Window
     function onResize() {
         $('.carousel-services__content').equalHeights();
