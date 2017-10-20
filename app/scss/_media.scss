@@ -7,6 +7,14 @@
       font-size: 60px;
     }
   }
+  section {
+    &.about, &.review, &.partners {
+      padding: 8% 0;
+    }
+  }
+  .section-gallery {
+    margin-top: 30px;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -53,6 +61,14 @@
     &__strong {
       margin-top: 15px;
     }
+  }
+  .carousel-service__composition {
+    & h3 {
+      font-size: 20px;
+    }
+  }
+  .carousel-services__list li {
+    padding: 10px 25px;
   }
 }
 
