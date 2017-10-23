@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     argv = require('yargs').argv,
     spritesmith = require('gulp.spritesmith'),
+    imagemin = require('gulp-imagemin'), // минификация изображений
     prod = argv.prod; // минификация
 
 
@@ -72,9 +73,10 @@ gulp.task('sprite', function(cb) {
     cb();
 });
 
-gulp.task('moveImg', function () {
-    return gulp.src(app_dir + '/img/**.*')
-        .pipe(gulp.dest(wp_dir + '/img'));
+gulp.task('imagemin', function() {
+    return gulp.src('app/img/**/*')
+        .pipe(cache(imagemin()))
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('moveFonts', function () {
@@ -87,13 +89,10 @@ gulp.task('watch', function () {
     gulp.watch(app_dir + '/scss/**/*.scss', gulp.series('sass'));
     gulp.watch(app_dir + '/js/*.js', gulp.series('moveJs'));
     gulp.watch(app_dir + '/**/*.html', gulp.series('moveHtml'));
-    gulp.watch(app_dir + '/img/*.*', gulp.series('moveImg'));
-    // gulp.watch(app_dir + '/**/*').on('change', browserSync.reload);
 });
 
 gulp.task('rebase', gulp.series(
     'moveHtml',
-    'moveImg',
     'moveJs',
     'sass',
     'moveFonts'
