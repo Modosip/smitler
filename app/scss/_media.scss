@@ -7,6 +7,9 @@
       font-size: 60px;
     }
   }
+  .call {
+    background-size: cover;
+  }
   section {
     &.about, &.review, &.partners {
       padding: 8% 0;
@@ -22,6 +25,14 @@
   .welcome {
     &__title {
       font-size: 48px;
+    }
+  }
+  .call {
+    &::before {
+      width: 100%;
+    }
+    .callback {
+      padding: 12% 0;
     }
   }
 }

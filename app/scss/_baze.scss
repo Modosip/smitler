@@ -30,6 +30,9 @@ section {
   &.inverse {
     color: #fff;
     background-color: $dark;
+    &.call {
+      background-color: #fff;
+    }
   }
   & h2 {
     color: $accent;

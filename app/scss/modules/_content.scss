@@ -217,7 +217,7 @@ $colors: $blue, $red, $accent;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #fff;
-  background-position: 25%;
+  background-position: 10%;
   &::before {
     content: '';
     width: 50%;
@@ -225,5 +225,138 @@ $colors: $blue, $red, $accent;
     position: absolute;
     height: 100%;
     background-color: rgba($accent, .92);
+  }
+}
+
+input, textarea, select,
+.selectize-control.single .selectize-input.input-active, .selectize-input,
+.callback .selectize-input {
+  background: transparent;
+  border: rgba(0,0,0,.1) 1px solid;
+  border-bottom: rgba(0,0,0,.1) 2px solid;
+  border-radius: 2px;
+  padding: 8px 22px;
+  outline: none;
+  color: #333;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 16px;
+}
+select {
+  padding: 11px 22px;
+}
+
+.selectize-control.single {
+  .selectize-input, &.dropdown-active {
+    &::after {
+      @include fontawesome();
+      border: none;
+      content: '\f107';
+      color: #fff;
+      position: absolute;
+      right: 30px;
+      top: 12px;
+    }
+    &.dropdown-active::after {
+      content: '\f106';
+    }
+  }
+  .selectize-input {
+    box-shadow: none;
+    overflow: inherit;
+    line-height: inherit;
+    text-align: left;
+    input {
+      font-size: 16px;
+    }
+    &.focus {
+      box-shadow: none;
+    }
+    &.dropdown-active::before {
+      background-color: transparent;
+    }
+  }
+  .selectize-dropdown {
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    .option.active {
+      background-color: lighten($accent, 25);
+    }
+    .optgroup-header, & [data-selectable] {
+      padding: 10px 22px;
+    }
+  }
+}
+
+.success {
+  display: none;
+  @include RalewayExtraBold();
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  z-index: 10;
+  span {
+    margin: auto;
+  }
+  & ~ * {
+    transition: all .5s ease;
+  }
+  &.active {
+    & ~ * {
+      opacity: .5;
+      filter: blur(10px);
+    }
+  }
+}
+
+.callback {
+  padding: 25% 0;
+  position: relative;
+
+  input, textarea, select,
+  .selectize-control.single .selectize-input.input-active, .selectize-input {
+    color: #fff;
+    width: 100%;
+    margin-top: 17px;
+
+    &::-webkit-input-placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+    &:-moz-placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
+  }
+  button {
+    margin-top: 40px;
+  }
+  &__logo {
+    & img {
+      width: 100px;
+      height: auto;
+    }
+  }
+  .formhead {
+    @include RalewayExtraBold();
+    margin: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  & p {
+    margin: 0;
   }
 }
