@@ -53,6 +53,23 @@
     }
 
   }
+  .quotes {
+    &::before, &::after {
+      display: none;
+    }
+  }
+  .partners.owl-carousel {
+    .owl-nav {
+      & > div {
+        &.owl-next {
+          right: 0;
+        }
+        &.owl-prev {
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
