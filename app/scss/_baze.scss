@@ -40,7 +40,7 @@ section {
       color: #fff;
     }
   }
-  &.about, &review, &.partners {
+  &.about, &.block-review, &.partners {
     padding: 5% 0;
   }
 }
@@ -64,6 +64,10 @@ h2 {
 
 h3 {
   @include RalewayExtraBold();
+}
+
+.text-center {
+  text-align: center;
 }
 
 img {

@@ -360,3 +360,38 @@ select {
     margin: 0;
   }
 }
+
+.review {
+  margin-top: 20px;
+  &__header {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.quotes {
+  position: absolute;
+  width: 100%;
+  &::before, &::after {
+    content: ',,';
+    position: absolute;
+    top: 184px;
+    font-size: 54px;
+    color: $accent;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    line-height: 0;
+    transform: rotate(180deg);
+    display: block;
+  }
+  &::before {
+    top: 220px;
+    left: -60px;
+  }
+  &::after {
+    right: -60px;
+    transform: rotate(0);
+  }
+}
