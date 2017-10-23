@@ -38,6 +38,23 @@ $ (function () {
                 items: 3
             }
         }
+    }).on('changed.owl.carousel', function() {
+        carouselService();
+    });
+
+    function carouselService() {
+        $('.carousel-services-item').each(function() {
+            var ths = $(this);
+            var thsh = ths.find('.carousel-services-content').outerHeight();
+            ths.find('.carousel-services-image').css('min-height', thsh);
+        });
+    }carouselService();
+
+    $('.reviews').owlCarousel({
+        loop: true,
+        items: 1,
+        smartSpeed: 700,
+        nav: false
     });
 
     $('select').selectize({
