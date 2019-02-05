@@ -29,9 +29,29 @@ body
 			min-height: 700px
 			height: 100vh
 			background-color: $dark
+			color: #ffffff
 		.top-line 
 				  padding-top: 40px
 				  position: absolute
+				  width: 100%
+				  z-index: 1
+				  
+	.logo			  
+		img
+			width: 125px
+			height: auto
+			margin-left: 45px
+	.phone
+		position: absolute
+		right: 85px
+		top: 44px
+		font-family: firasans, sans-serif
+		font-size: 22px
+		white-space: nowrap
+		.fa
+			color: #555555
+			font-size: 22px
+			margin-right: 3px
 
 	section, header
 		position: relative
@@ -44,6 +64,34 @@ body
 	height: auto
 	&.img-width
 		width: 100%
+
+.hamburger
+	right: 0
+	position: absolute
+	top: 34px
+	.hamburger-box
+		width: 34px
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	border-radius: 0
+	width: 34px
+	height: 2px
+	background-color: #ffffff
+.mm-navbar 	
+	height: auto
+	position: relative
+	.mm-title img
+		width: 128px
+		height: auto
+		margin: 10px 0 35px
+	
+
+
+			
+
+
+
+
+
 
 .text-center
 	text-align: center
